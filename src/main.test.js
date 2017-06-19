@@ -17,10 +17,10 @@ describe('getUserById', () => {
     expect(failureFn()).to.equal('Error: name is agreal');
   });
 
-  it('should call success', function(done) {
+  it('should call success', (done) => {
     const successFn = sinon.stub().returns({name: 'agreal1'});
 
-    stubGetUserByIdOld.callsFake(function(id, successFakeFn) {
+    stubGetUserByIdOld.callsFake((id, successFakeFn) => {
       expect(id).to.equal(1);
       successFakeFn(successFn());
     });
@@ -34,10 +34,10 @@ describe('getUserById', () => {
       .then(done);
   });
 
-  it('should call failure', function(done) {
+  it('should call failure', (done) => {
     const failureFn = sinon.stub().returns('Error: name is agreal2');
 
-    stubGetUserByIdOld.callsFake(function(id, successFakeFn, failureFakeFn) {
+    stubGetUserByIdOld.callsFake((id, successFakeFn, failureFakeFn) => {
       expect(id).to.equal(1);
       failureFakeFn(failureFn());
     });
