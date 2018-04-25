@@ -1,15 +1,16 @@
 {
   "name": "@agreal/mocha-test",
   "version": "1.0.0",
-  "description": "",
+  "description": "mocha testing demo",
+  "repository": "git@github.com:Agreal/mocha-demo.git",
   "scripts": {
     "test": "mocha"
   },
   "author": "Agreal <qxq111@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.0.2",
-    "mocha": "^3.4.2",
-    "sinon": "^2.3.4"
+    "chai": "4.1.2",
+    "mocha": "5.1.1",
+    "sinon": "4.5.0"
   }
 }
