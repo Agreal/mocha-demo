@@ -6,21 +6,21 @@ const FinalGame = [1, 2];
  * 蛇形排阵
  * @param playerNumber
  */
-function playerOrder(playerNumber) {
+function getSnakeOrder(playerNumber) {
   if (FinalGame.length === playerNumber) {
     return FinalGame;
   }
-  return playerOrder1(FinalGame, playerNumber);
+  return getNewOrder(FinalGame, playerNumber);
 }
 
-function playerOrder1(playPositions, playerNumber) {
+function getNewOrder(playPositions, playerNumber) {
   if (playPositions.length === playerNumber) {
     return playPositions;
   }
-  return playerOrder1(extendPlayPosition(playPositions), playerNumber);
+  return getNewOrder(nextOrder(playPositions), playerNumber);
 }
 
-function extendPlayPosition(list) {
+function nextOrder(list) {
   let result = [];
   const max = list.length * 2 + 1;
   list.forEach((item, index) => {
@@ -45,4 +45,4 @@ function extendPlayPosition(list) {
 // [1, 2]
 // [1, 4, 3, 2]
 // [1, 8, 5, 4, 3, 6, 7, 2]
-exports.playerOrder = playerOrder;
+exports.getSnakeOrder = getSnakeOrder;
