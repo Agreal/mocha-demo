@@ -4,7 +4,8 @@
   "description": "mocha testing demo",
   "repository": "git@github.com:Agreal/mocha-demo.git",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:watch": "mocha -w"
   },
   "author": "Agreal <qxq111@gmail.com>",
   "license": "MIT",
