@@ -1,6 +1,6 @@
 const {playerOrder} = require('./games');
 
-describe.only('Games', function () {
+describe('Games', function () {
   it('final game', () => {
     const result = playerOrder(2);
     expect(result).to.eql([1, 2]);
